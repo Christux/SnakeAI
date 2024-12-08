@@ -1,0 +1,25 @@
+#board {
+    margin: 15px;
+    display: table;
+    border: 2px solid whitesmoke;
+}
+
+#board .row {
+    display: table-row;
+}
+
+#board .row .cell {
+    background-color: lightgray;
+    width: 30px;
+	height: 30px;
+    display: table-cell;
+    border: 1px solid whitesmoke;
+}
+
+#board .row .cell.fruit {
+    background-color: darkred;
+}
+
+#board .row .cell.snake {
+    background-color: darkgreen;
+}

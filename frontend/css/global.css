@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+#header {
+    text-align: center;
+    background-color: rgb(212, 212, 212);
+}
+
+#header h1 {
+    margin: 0;
+    padding: 0.2em;
+}
+
+#container {
+    margin: 0;
+    background-color: green;
+}
+
+#panel {
+    background-color: blue;
+}
