@@ -77,17 +77,17 @@ def set_socket(app: Flask, socketio: SocketIO, snake: Snake) -> None:
     def test_disconnect():
         print('Client disconnected')
 
-    @socketio.on_error()        # Gère l'espace de noms par défaut
+    @socketio.on_error()
     def error_handler(e):
         app.logger.error('Une erreur s\'est produite : ' + str(e))
         socketio.emit('error_message', 'Une erreur s\'est produite : ' + str(e))
 
 
-def create_app(config_class=Config):
+def create_app(height: int, width: int, config_class: Config):
     app = Flask(__name__, template_folder='../frontend/template')
     app.config.from_object(config_class)
     
-    snake = Snake(16, 32)
+    snake = Snake(height, width)
 
     set_routes(app=app)
     socketio = SocketIO(app)
